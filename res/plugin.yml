@@ -1,0 +1,5 @@
+name: KRandomTele
+main: com.ksqeib.krandomtele.Main
+version: 1.0
+author: ksqeib
+depend: [KingdomsPlus]

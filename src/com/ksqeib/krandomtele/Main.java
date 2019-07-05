@@ -19,7 +19,6 @@ import java.util.Random;
 public class Main  extends JavaPlugin implements Listener {
     int f=3000;
     Random rm=new Random();
-//    World w;
     @Override
     public void onEnable() {
         //事件
@@ -30,7 +29,6 @@ public class Main  extends JavaPlugin implements Listener {
         if(e.getPlayer().getStatistic(Statistic.PLAY_ONE_TICK)==0){
             e.getPlayer().teleport(rtp(e.getPlayer()));
         }
-//        w=e.getPlayer().getWorld();
     }
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onDeath(PlayerRespawnEvent e){
@@ -45,11 +43,5 @@ public class Main  extends JavaPlugin implements Listener {
         double z=rm.nextDouble()*f;
         Double y=(double) w.getHighestBlockYAt((int)x,(int)z);
         return new Location(w,x,y,z);
-//        p.teleport(newloc);
-//        new BukkitRunnable(){
-//            @Override
-//            public void run() {
-//            }
-//        }.runTaskLater(this,20L);
     }
 }
